@@ -7,4 +7,22 @@
     <string name="no">No</string>
     <string name="data">My valuable data</string>
     <string name="delete_data">Delete data</string>
+    <string name="more_complicated_dialog">More complicated dialog</string>
+
+
+    <string name="add_remove_range">Add or remove several</string>
+    <string name="fortryd">Canvcel</string>
+    <string name="fjern">Remove</string>
+    <string name="tilf_j">Add</string>
+    <string name="start_nr">Start no.:</string>
+    <string name="slut_nr">End no.:</string>
+    <string name="tilf_j_eller_fjern_en_sekvens_af_jumbob_ger">
+        Add or remove a sequence of jumbobooks</string>
+
+    <string name="no_negative_numbers"> Cannot be negative numbers</string>
+    <string name="end_number_bigger_than_start"> End number cannot be less than starting number </string>
+    <string name ="illegal_search">You must either input a jumbobook nr such as 123 , a year or a title text to search for
+    </string>
+
+    <string name="dialog_remove_add_title">Remove/add range to collection</string>
 </resources>
