@@ -8,7 +8,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,18 +16,22 @@ class MainActivity : AppCompatActivity() {
 
     //callback function from yes/no dialog - for yes choice
     fun positiveClicked() {
-            val toast = Toast.makeText(this,
-                "positive button clicked", Toast.LENGTH_LONG)
-            toast.show()
-            dataText.text = "" //clearing the data
-        }
+        val toast = Toast.makeText(
+            this,
+            "positive button clicked", Toast.LENGTH_LONG
+        )
+        toast.show()
+        dataText.text = "" //clearing the data
+    }
 
 
     //callback function from yes/no dialog - for no choice
     fun negativeClick() {
         //Here we override the method and can now do something
-        val toast = Toast.makeText(this,
-            "negative button clicked", Toast.LENGTH_LONG)
+        val toast = Toast.makeText(
+            this,
+            "negative button clicked", Toast.LENGTH_LONG
+        )
         toast.show()
     }
 
@@ -36,14 +39,13 @@ class MainActivity : AppCompatActivity() {
     fun showDialog(v: View) {
         //showing our dialog.
 
-        val dialog = MyDialogFragment(::positiveClicked,::negativeClick)
+        val dialog = MyDialogFragment(::positiveClicked, ::negativeClick)
         //Here we show the dialog
         //The tag "MyFragement" is not important for us.
-        dialog.show(supportFragmentManager,"myFragment")
+        dialog.show(supportFragmentManager, "myFragment")
     }
 
-    fun showCustomDialog(v:View)
-    {
+    fun showCustomDialog(v: View) {
         val dialog = AddRangeDialog(::addRemoveRange)
         dialog.show(supportFragmentManager, "addrangedialogfragment")
     }
@@ -55,8 +57,11 @@ class MainActivity : AppCompatActivity() {
         if (add)
             modify = "add"
 
-        val toast = Toast.makeText(this,
-            "You choose to $modify records starting from $start and ending at $end", Toast.LENGTH_LONG)
+        val toast = Toast.makeText(
+            this,
+            "You choose to $modify records starting from $start and ending at $end",
+            Toast.LENGTH_LONG
+        )
         toast.show()
         //Change data
         //update UI

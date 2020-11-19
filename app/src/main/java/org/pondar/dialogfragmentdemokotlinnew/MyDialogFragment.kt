@@ -24,7 +24,7 @@ open class MyDialogFragment(var posClick: ()-> Unit, var negClick: ()->Unit) : D
 
     //This is our positive listener for when the user presses
     //the yes button
-    private var pListener: DialogInterface.OnClickListener = DialogInterface.OnClickListener { _, _ ->
+    private var pListener: DialogInterface.OnClickListener = DialogInterface.OnClickListener {_, _ ->
         // these will be executed when user click Yes button
         posClick()
     }
