@@ -6,7 +6,8 @@ import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
 
-open class MyDialogFragment(var posClick: ()-> Unit, var negClick: ()->Unit) : DialogFragment() {
+//notice that the negClick has default value of the empty function
+open class MyDialogFragment(var posClick: ()-> Unit, var negClick: ()->Unit= {}) : DialogFragment() {
 
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
