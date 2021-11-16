@@ -5,28 +5,34 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import org.pondar.dialogfragmentdemokotlinnew.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
     }
 
 
     //callback function from yes/no dialog - for yes choice
-    fun positiveClicked() {
+    private fun positiveClicked() {
         val toast = Toast.makeText(
             this,
             "positive button clicked", Toast.LENGTH_LONG
         )
         toast.show()
-        dataText.text = "" //clearing the data
+        binding.dataText.text = "" //clearing the data
     }
 
 
     //callback function from yes/no dialog - for no choice
-    fun negativeClick() {
+    private fun negativeClick() {
         //Here we override the method and can now do something
         val toast = Toast.makeText(
             this,
